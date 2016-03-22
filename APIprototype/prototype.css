@@ -1,0 +1,77 @@
+.control1 {
+	position: fixed;
+	width: 200px;
+	top: 45%;
+	left: 5%;
+}
+
+.control2 {
+	position: fixed;
+	width: 200px;
+	top: 55%;
+	left: 5%;
+}
+
+.image1 {
+	position: fixed;
+	top: 40%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+}
+
+.image2 {
+	position: fixed;
+	top: 40%;
+	left: 59%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	
+}
+
+.image3 {
+	position: fixed;
+	top: 70%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+}
+
+.image4 {
+	position: fixed;
+	top: 70%;
+	left: 59%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+}
+
+.thumbnail {
+    height: 200px;
+     width: 200px;
+}
+
+.thumbnail img {
+     height: 100%;
+     width: 100%;
+     overflow: hidden;
+}
+
+.nav {
+	position: fixed;
+	text-align:center;
+    top: 45%;
+    left: 79%;
+}
+
+.hyponym {
+	position: fixed;
+	display: in-line;
+    top: 79%;
+    left: 32%;
+}
+
+
+
+
+
+

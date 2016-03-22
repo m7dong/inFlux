@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="image">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<link href="css/prototype.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container">
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                </button>
+	                <a class="navbar-brand" href="#">ImageNet API</a>
+	            </div>
+	        </div>
+	    </nav>
+		
+		<div ng-controller="ButtonController as button" >
+			<div class="control1">
+				<button type="button" class="btn btn-primary btn-lg btn-control btn-block" ng-click="button.selectButton(1)">Back to Parent Set</button>
+			</div>
+			<div class="control2">
+				<button type="button" class="btn btn-primary btn-lg btn-control btn-block" ng-click="button.selectButton(2)">Next Four</button>
+			</div>
+		</div>
+		
+ 		<section ng-controller="PanelController as panel">
+ 			<ul class="nav nav-stacked nav-pills" ng-show="current[0].wnid">
+ 				<li ng-class="{active: panel.isSelected(1)}"><a href ng-click="panel.selectTab(1)">{{ current[0].wnid}}</a></li>
+ 				<li ng-class="{active: panel.isSelected(2)}"><a href ng-click="panel.selectTab(2)">{{ current[1].wnid}}</a></li>
+ 				<li ng-class="{active: panel.isSelected(3)}"><a href ng-click="panel.selectTab(3)">{{ current[2].wnid}}</a></li>
+				<li ng-class="{active: panel.isSelected(4)}"><a href ng-click="panel.selectTab(4)">{{ current[3].wnid}}</a></li>
+ 			</ul>
+			<div class="panel">
+				<div class="image1 col-xs-8 col-md-6">
+					<a href class="thumbnail">
+				      <img ng-src="{{images[0]}}" err-src="source/No_image_available.svg"/>
+				    </a>
+				</div>
+				<div class="image2 col-xs-8 col-md-6">
+					<a href class="thumbnail">
+				      <img ng-src="{{images[1]}}" err-src="source/No_image_available.svg"/>
+				    </a>
+				</div>
+				<div class="image3 col-xs-8 col-md-6">
+					<a href class="thumbnail">
+				      <img ng-src="{{images[2]}}" err-src="source/No_image_available.svg"/>
+				    </a>
+				</div>
+				<div class="image4 col-xs-8 col-md-6">
+					<a href class="thumbnail">
+				      <img ng-src="{{images[3]}}" err-src="source/No_image_available.svg"/>
+				    </a>
+				</div>
+			</div>
+ 		</section>
+	</body>
+		
+		
