@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="image">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<link href="css/app.css" rel="stylesheet" type="text/css">
+	</head>
+	<body ng-controller="ImageController as image">
+		<div class="tagging">
+			<div class="row">
+			<i class="glyphicon glyphicon-triangle-left" ng-click="image.previousPic()"></i>
+			<div class="image-container">
+			<img ng-src="{{image.products[image.picIndex].images}}"/>
+			</div>
+			<i class="glyphicon glyphicon-triangle-right" ng-click="image.nextPic()"></i>
+			</div>
+			<h4>Type the tags descripting the image: </h4>
+		 	<section class="userinput">
+				<form name="tagForm" ng-controller="TagController as tagCtrl"
+									 ng-submit="tagForm.$valid && tagCtrl.addTag(image.products[image.picIndex])" novalidate>
+					<div class="tags">
+						<blockquote>
+							<b ng-repeat="tag in image.products[image.picIndex].tags">{{tag.body}}, </b>
+						</blockquote>	
+					</div>				
+					<div class="addTag">
+						<blockquote>
+							<b>Adding: {{tagCtrl.tag.body}}</b>
+						</blockquote>
+						<input type="text" ng-model="tagCtrl.tag.body" id="input" name="input" ng-maxlength="tagCtrl.max_length" /><br>
+			            <p>(max_length: {{tagCtrl.max_length}} Characters) input valid ?= <code>{{tagForm.input.$valid}}</code><br></p>
+						<input class="btn-primary" type="submit" value="Next Tag" />
+					</div>
+				</form>		
+		 	</section>
+		 </div>
+	</body>

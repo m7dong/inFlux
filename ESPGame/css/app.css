@@ -1,0 +1,85 @@
+.tagging {
+	top: 100px;
+	width: 450px;
+	left: 500px;
+	height: 500px;
+	position:relative;
+}
+
+.userinput {
+	height:250px;
+	width:450px;
+	position:absolute;
+	bottom:0px;
+}
+
+.image-container {
+	position: relative;
+	left: 50px;
+	width: 300px;
+	height: 200px; 
+	
+}
+
+.image-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%
+}
+
+.tags {
+	position: relative;
+    top: 30px;
+    left: 350px;
+    width: 200px;
+}
+
+.tags blockquote {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.addTag {
+	position: absolute;
+    bottom: 50px;
+    left: 0px;
+    width: 200px;
+}
+
+.addTag blockquote {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+}
+
+.btn-primary {
+	position: relative;
+    top: 0px;
+}
+
+.glyphicon {
+    font-size: 30px;
+    pointer-events: all;
+}
+
+.glyphicon-triangle-left {
+	position: absolute;
+	top: 30px;
+	left: 0px;
+}
+
+.glyphicon-triangle-right {
+	position: absolute;
+	top: 30px;
+	left: 350px;
+}
